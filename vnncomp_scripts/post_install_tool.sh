@@ -34,8 +34,8 @@ EOF
 
 # Make sure this is the default location for license
 # Default location can be found in the license
-sudo mkdir -p /opt/gurobi
-sudo mv gurobi.lic /opt/gurobi/
+mkdir -p /opt/gurobi
+mv gurobi.lic /opt/gurobi/
 
 if grep -q "Using license file /opt/gurobi/gurobi.lic" <<< "$(${VNNCOMP_PYTHON_PATH}/gurobi_cl)"; then
 	echo "license setup is successful"

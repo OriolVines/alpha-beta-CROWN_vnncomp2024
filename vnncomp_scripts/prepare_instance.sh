@@ -38,8 +38,8 @@ if [[ "${ABCROWN_TEST_RUN}" -ne "1" ]]; then
 	killall -q -9 get_cuts
 	sleep 3
 	# Reset GPU, make sure nothing is running.
-	(sudo -n rmmod nvidia_uvm; sudo -n rmmod nvidia_drm; sudo -n rmmod nvidia_modeset; sudo -n nvidia-smi -e 0; sudo -n nvidia-smi -pm 0; sudo -n nvidia-smi -r -i 0) > /dev/null
-	sudo -n modprobe nvidia_uvm; sudo -n nvidia-smi -pm 1
+	#(sudo -n rmmod nvidia_uvm; sudo -n rmmod nvidia_drm; sudo -n rmmod nvidia_modeset; sudo -n nvidia-smi -e 0; sudo -n nvidia-smi -pm 0; sudo -n nvidia-smi -r -i 0) > /dev/null
+	#sudo -n modprobe nvidia_uvm; sudo -n nvidia-smi -pm 1
 	# Make sure GPU shows up.
 	nvidia-smi
 
